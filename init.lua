@@ -3,6 +3,51 @@ require("config")
 -- This a test
 -- another
 -- test
+  --                       light     dark
+  -- 0   normal  black       #383a42   #282c34
+  -- 1   normal  red         #e45649   #e06c75
+  -- 2   normal  green       #50a14f   #98c379
+  -- 3   normal  yellow      #c18401   #e5c07b
+  -- 4   normal  blue        #0184bc   #61afef
+  -- 5   normal  magenta     #a626a4   #c678dd
+  -- 6   normal  cyan        #0997b3   #56b6c2
+  -- 7   normal  white       #fafafa   #dcdfe4
+  --             foreground  #383a42   #dcdfe4
+  --           background  #fafafa   #282c34
+  -- warm = {
+  --     black = "#191a1c",
+  --     -- Background
+  --     bg0 = "#282c34",
+  --     bg1 = "#35373b",
+  --     bg2 = "#3e4045",
+  --     bg3 = "#676768",
+  --     -- bg0 = "#2c2d30",
+  --     -- bg1 = "#35373b",
+  --     -- bg2 = "#3e4045",
+  --     -- bg3 = "#404247",
+  --     bg_d = "#2b2b27",
+  --     bg_blue = "#79b7eb",
+  --     bg_yellow = "#e6cfa1",
+  --     fg = "#b1b4b9",
+  --     purple = "#c27fd7",
+  --     green = "#99bc80",
+  --     orange = "#c99a6e",
+  --     blue = "#68aee8",
+  --     yellow = "#dfbe81",
+  --     cyan = "#5fafb9",
+  --     red = "#e16d77",
+  --     grey = "#a3a3a3",
+  --     light_grey = "#8b8d91",
+  --     dark_cyan = "#316a71",
+  --     dark_red = "#914141",
+  --     dark_yellow = "#8c6724",
+  --     dark_purple = "#854897",
+  --     diff_add = "#32352f",
+  --     diff_delete = "#342f2f",
+  --     diff_change = "#203444",
+  --     diff_text = "#32526c",
+  --   },
+
 
 -- vim.g.mapleader = ' '
 -- vim.g.maplocalleader = ' '

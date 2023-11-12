@@ -1,6 +1,7 @@
 -- GET LAZY
 require("config")
 -- This a test
+-- another
 
 -- vim.g.mapleader = ' '
 -- vim.g.maplocalleader = ' '

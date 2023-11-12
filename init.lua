@@ -2,6 +2,7 @@
 require("config")
 -- This a test
 -- another
+-- test
 
 -- vim.g.mapleader = ' '
 -- vim.g.maplocalleader = ' '

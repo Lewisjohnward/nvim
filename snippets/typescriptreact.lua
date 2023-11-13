@@ -175,12 +175,14 @@ local _functionSnippet = s({ trig = "digit(%d)(%d)", regTrig = true }, {
 })
 
 local consolelog = s("cl;", fmt([[console.log({})]], { i(1, "myvar") }))
+local consoleloghello = s("clh;", {t("console.log(\"hello\")")})
 -- local test = s("cl;", fmt([[console.log({})]], { i(1, "myvar") }))
 -- local test = s("cl;", fmt([[console.log({})]], { i(1, "myvar") }))
 -- local test = s("cl;", fmt([[console.log({})]], { i(1, "myvar") }))
 
 table.insert(autosnippets, _functionSnippet)
 table.insert(autosnippets, consolelog)
+table.insert(autosnippets, consoleloghello)
 table.insert(autosnippets, functionSnippet)
 -- table.insert(snippets, consolelog)
 

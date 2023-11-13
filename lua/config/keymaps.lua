@@ -180,3 +180,5 @@ vim.keymap.set("n", "<leader>l", ":ls<cr>:b<space>")
 -- map <leader>log yiwoconsole.log(<ESC>pa)<ESC>:w<CR>
 vim.keymap.set("n", "<leader>;cl", "yiwoconsole.log(<esc>pa)<esc>", { desc = "[C]onsole [L]og" })
 vim.keymap.set("n", "<leader>cr", "@:", { desc = "[R]epeat [C]ommand" })
+
+vim.keymap.set("v", "<leader>ca", ":Lspsaga code_action")

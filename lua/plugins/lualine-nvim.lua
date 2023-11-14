@@ -1,12 +1,12 @@
 local config = function()
-	local theme = require("lualine.themes.onedark")
+	local theme = require("lualine.themes.tokyonight")
 
 	-- set bg transparency in all modes
 
 	require("lualine").setup({
 		options = {
-      -- theme = theme,
-			theme = "onedark",
+			theme = theme,
+			-- theme = "tokyonight",
 			globalstatus = true,
 		},
 		tabline = {

@@ -177,6 +177,10 @@ local _functionSnippet = s({ trig = "digit(%d)(%d)", regTrig = true }, {
 local consolelog = s("cl;", fmt([[console.log({})]], { i(1, "myvar") }))
 local consoleloghello = s("clh;", { t('console.log("hello")') })
 local classname = s("cn;", fmt([[className="{}"]], { i(1, "class") }))
+local usestate = s("us;", { t("const [state, useState] = useState()") })
+-- local usestate = s("us;", fmt([[const [{}, {}] = useState()]], { i(1, "myvar") }))
+table.insert(autosnippets, usestate)
+
 -- local test = s("cl;", fmt([[console.log({})]], { i(1, "myvar") }))
 -- local test = s("cl;", fmt([[console.log({})]], { i(1, "myvar") }))
 -- local test = s("cl;", fmt([[console.log({})]], { i(1, "myvar") }))

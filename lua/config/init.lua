@@ -21,7 +21,7 @@ local opts = {
 		lazy = true,
 	},
 	install = {
-		colorscheme = { "onedark" },
+		colorscheme = { "tokyonight" },
 	},
 	rtp = {
 		disabled_plugins = {
@@ -44,4 +44,4 @@ local opts = {
 vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappings are correct
 
 require("lazy").setup("plugins", opts)
-require("onedark").load()
+require("tokyonight").load()

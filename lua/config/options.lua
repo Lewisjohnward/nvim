@@ -3,7 +3,7 @@ local opt = vim.opt
 -- options
 
 -- remove comments on things
-opt.formatoptions:remove{ "c", "r", "o" }
+opt.formatoptions:remove({ "c", "r", "o" })
 --
 --opt.autochdir = true
 -- Tab /indentation
@@ -13,6 +13,7 @@ opt.softtabstop = 2
 opt.expandtab = true
 opt.smartindent = true
 opt.wrap = true
+opt.cursorline = true
 
 -- Search
 opt.incsearch = true

@@ -4,10 +4,14 @@
 vim.keymap.set("n", "<space>hh", ":noh<cr>", { silent = true })
 -- Keymaps for better default experience
 vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
+vim.keymap.set("n", "H", "^", { silent = true })
+vim.keymap.set("n", "L", "$", { silent = true })
 -- Remap for dealing with word wrap
 vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
+-- set cursor line
+vim.o.cursorline = true
 -- Make line numbers default
 vim.wo.number = true
 
@@ -80,7 +84,6 @@ vim.keymap.set("n", "<s-tab>", ":bprev<cr>", { silent = true })
 -- scroll
 --vim.keymap.set('n', '<c-u>', '<c-u>zz')
 -- vim.keymap.set('n', '<c-d>', '<c-d>zz')
-vim.o.scrolloff = 8
 
 -- close buffer
 -- buffer previous| split| buffer next| buffer delete
@@ -182,3 +185,20 @@ vim.keymap.set("n", "<leader>;cl", "yiwoconsole.log(<esc>pa)<esc>", { desc = "[C
 vim.keymap.set("n", "<leader>cr", "@:", { desc = "[R]epeat [C]ommand" })
 
 vim.keymap.set("v", "<leader>ca", ":Lspsaga code_action")
+
+-- Primeagen
+-- next greatest remap ever : asbjornHaland
+-- vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+-- vim.keymap.set("n", "<leader>Y", [["+Y]])
+--
+-- vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
+--
+--
+--
+-- Move text up and down
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", {silent = true})
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", {silent = true})
+
+-- Greatest
+vim.keymap.set("x", "<leader>p", [["_dP]])
+vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])

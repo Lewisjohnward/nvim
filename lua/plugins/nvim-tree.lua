@@ -209,9 +209,14 @@ M.config = function()
 				api.node.open.edit()
 				vim.cmd(":NvimTreeFindFile")
 			end
+			local open_file_veritcal = function()
+				api.node.open.vertical()
+				vim.cmd(":NvimTreeFindFile")
+			end
 
+			vim.keymap.set("n", "<cr>", open_file, opts("Open"))
 			vim.keymap.set("n", "o", open_file, opts("Open"))
-			vim.keymap.set("n", "s", api.node.open.vertical, opts("Open: Vertical Split"))
+			vim.keymap.set("n", "s", open_file_veritcal, opts("Open: Vertical Split"))
 			vim.keymap.set("n", "u", api.tree.change_root_to_parent, opts("Up"))
 			vim.keymap.set("n", "<C-]>", api.tree.change_root_to_node, opts("CD"))
 			vim.keymap.set("n", "r", api.fs.rename_full, opts("Rename: Full Path"))

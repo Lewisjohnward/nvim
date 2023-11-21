@@ -71,7 +71,7 @@ vim.g.loaded_netrwPlugin = 1
 vim.keymap.set("n", "<space><space>", ":w<cr>", { silent = true, desc = "Save current focused buffer" })
 -- quit
 vim.keymap.set("n", "<space>a;", ":q<cr>:q<cr>:q<cr>:q<cr>")
-vim.keymap.set("n", "<space>q", ":q!<cr>:q!<cr>:q!<cr>:q!<cr>")
+vim.keymap.set("n", "<space>q", ":q!<cr>", { silent = true })
 -- edit rc
 vim.keymap.set("n", "<space>rce", ":e $MYVIMRC<cr>", { silent = true })
 -- re-source
@@ -150,7 +150,7 @@ vim.keymap.set("n", "<space>sl", ":rightb vsplit term://bash<cr>")
 vim.keymap.set("n", "<space>sk", ":Telescope keymaps<cr>")
 
 -- NvimTree
-vim.keymap.set("n", "<c-n>", ":NvimTreeFocus<cr>", { silent = true })
+vim.keymap.set("n", "<c-n>", ":NvimTreeFindFile<cr>", { silent = true })
 vim.keymap.set("n", "<space>cn", ":NvimTreeClose<cr>", { silent = true })
 --vim.keymap.set('n', '<c-n>', ':NvimTreeFindFileToggle!<cr>', { silent = true })
 -- nvimtreeopen
@@ -196,9 +196,12 @@ vim.keymap.set("v", "<leader>ca", ":Lspsaga code_action")
 --
 --
 -- Move text up and down
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", {silent = true})
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", {silent = true})
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { silent = true })
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { silent = true })
 
 -- Greatest
 vim.keymap.set("x", "<leader>p", [["_dP]])
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+-- Undotree
+vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)

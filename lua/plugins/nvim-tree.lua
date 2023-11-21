@@ -146,6 +146,7 @@ M.config = function()
 					noremap = true,
 					silent = true,
 					nowait = true,
+					-- update_cwd = false,
 				}
 			end
 

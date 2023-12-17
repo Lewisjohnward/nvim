@@ -15,6 +15,28 @@ local group = vim.api.nvim_create_augroup("myGroup", { clear = true })
 
 vim.api.nvim_create_autocmd("CursorHold", { command = "echo 'hold'", group = group })
 vim.api.nvim_create_autocmd("BufEnter", { command = ":set formatoptions-=ro", group = group })
+vim.api.nvim_create_autocmd("VimEnter", { command = ":vsplit" })
+-- vim.api.nvim_create_autocmd("VimEnter", {
+-- 	pattern = "*",
+-- 	group = vim.api.nvim_create_augroup("NvimTree", { clear = true }),
+-- 	once = true,
+-- 	callback = function(_)
+-- 		if vim.fn.argc() == 0 then
+-- 			vim.cmd("NvimTreeOpen")
+-- 		end
+-- 	end,
+-- })
+-- vim.api.nvim_create_autocmd("VimEnter", {
+-- 	group = vim.api.nvim_create_augroup("NvimTreeOpen", { clear = true }),
+-- 	command = "NvimTreeOpen",
+-- })
+
+-- vim.api.nvim_create_autocmd("VimEnter", {
+--   group = vim.api.nvim_create_augroup("NvimTreeOpen", { clear = true }),
+--   callback = vim.schedule_wrap(function()
+--     vim.cmd("NvimTreeOpen")
+--   end),
+-- })
 
 -- :h events displays all events
 -- BufAdd

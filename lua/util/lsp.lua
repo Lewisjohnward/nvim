@@ -18,9 +18,11 @@ M.on_attach = function(client, bufnr)
 	vim.keymap.set("n", "<leader>rn", ":Lspsaga rename<cr>", opts) -- smart rename
 	vim.keymap.set("n", "<leader>D", ":Lspsaga show_line_diagnostics<cr>", opts) -- show  diagnostics for line
 	vim.keymap.set("n", "<leader>d", ":Lspsaga show_cursor_diagnostics<cr>", opts) -- show diagnostics for cursor
-	vim.keymap.set("n", "<leader>[g", ":Lspsaga diagnostic_jump_prev<cr>", opts) -- jump to prev diagnostic in buffer
-	vim.keymap.set("n", "<leader>]g", ":Lspsaga diagnostic_jump_next<cr>", opts) -- jump to next diagnostic in buffer
-
+	vim.keymap.set("n", "<C-[>", ":Lspsaga diagnostic_jump_prev<cr>", opts) -- jump to prev diagnostic in buffer
+	vim.keymap.set("n", "<C-]>", ":Lspsaga diagnostic_jump_next<cr>", opts) -- jump to next diagnostic in buffer
+	-- vim.keymap.set("n", "<leader>[g", ":Lspsaga diagnostic_jump_prev<cr>", opts) -- jump to prev diagnostic in buffer
+	-- vim.keymap.set("n", "<leader>]g", ":Lspsaga diagnostic_jump_next<cr>", opts) -- jump to next diagnostic in buffer
+	--
 	vim.keymap.set("n", "K", ":Lspsaga hover_doc<CR>", opts) -- show documentation for what is under cursor
 
 	if client.name == "pyright" then

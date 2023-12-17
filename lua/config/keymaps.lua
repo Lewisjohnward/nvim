@@ -92,6 +92,8 @@ vim.keymap.set("n", "<space>bcc", ":bp<bar>sp<bar>bn<bar>bd<CR>", { silent = tru
 -- vim.keymap.set('n', '<c-x>x', ':bd!<CR>')
 
 vim.keymap.set("i", "jk", "<esc>")
+-- vim.keymap.set("v", "jk", "<esc>")
+-- vim.keymap.set("x", "jk", "<esc>")
 
 -- Window maps
 vim.keymap.set("n", "<c-h>", "<c-w>h")
@@ -130,7 +132,6 @@ vim.keymap.set("n", "<space>bcc", ":bp<bar>sp<bar>bn<bar>bd<CR>")
 -- if buffer has unsaved changes force close
 -- vim.keymap.set('n', '<c-x>x', ':bd!<CR>')
 
-vim.keymap.set("i", "jk", "<esc>")
 -- vim.keymap.set("n", "jk", "<esc>")
 
 -- Window maps
@@ -200,8 +201,17 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { silent = true })
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { silent = true })
 
 -- Greatest
-vim.keymap.set("x", "<leader>p", [["_dP]])
+vim.keymap.set("x", "p", [["_dP]])
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- Undotree
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
+
+vim.keymap.set("n", "J", "mzJ`z")
+-- vim.keymap.set("n", "K", ":m '>-2<CR>gv=gv")
+
+-- insert clsx
+-- vim.keymap.set("n", "<leader>clsx", 'f"i{clsx(jkf"f"a)}jkFc,;;jkjk')
+-- expand tag
+--ea
+--jkO
